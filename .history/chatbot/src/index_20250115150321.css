@@ -55,7 +55,7 @@ body {
   font-weight: 600;
 }
 
-.chat-header button {
+.chatbot-header button {
   height: 40px;
   width: 40px;
   border: none;
@@ -66,9 +66,9 @@ body {
   padding-top: 2px;
   border-radius: 50%;
   margin-right: -10px;
-  background: none;
+  background: 6d4fc2;
   transition: 0.2s ease;
 }
-.chat-header button:hover {
+.chatbot-header button :hover {
   background: #593bab;
 }

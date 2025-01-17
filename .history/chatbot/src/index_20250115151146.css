@@ -69,6 +69,6 @@ body {
   background: none;
   transition: 0.2s ease;
 }
-.chat-header button:hover {
+.chat-header button :hover {
   background: #593bab;
 }
