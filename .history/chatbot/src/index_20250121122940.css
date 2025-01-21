@@ -79,9 +79,7 @@ body {
   gap: 20px;
   padding: 25px 22px;
   height: 460px;
-  margin-bottom: 82px;
   overflow-y: auto;
-  padding: 25px 22px;
 }
 
 .chat-body .message {
@@ -141,11 +139,6 @@ body {
   background: #fff;
   border-radius: 32px;
   outline: 1px solid #cccce5;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
-}
-
-.chat-footer .chat-form:focus-within {
-  outline: 2px solid #6d4fc2;
 }
 
 .chat-form .message-input {
@@ -159,24 +152,18 @@ body {
 }
 
 .chat-form button {
-  height: 35px;
-  width: 35px;
-  border: none;
-  display: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.15rem;
-  color: #fff;
-  flex-shrink: 0;
-  margin-right: 6px;
-  border-radius: 50%; /* Ensures round edges */
-  background: #6d4fc2;
-  transition: 0.2s ease;
-}
-.chat-form button:hover {
-  background: #593bab;
-}
-
-.chat-form .message-input:valid ~ button {
-  display: block;
+  height: 40px; /* Ensure height is consistent */
+  width: 40px; /* Match width to height */
+  border: none; /* Remove any borders */
+  outline: none; /* Remove default outline */
+  cursor: pointer; /* Pointer for hover effect */
+  font-size: 1.15rem; /* Icon size */
+  color: #fff; /* Icon color */
+  flex-shrink: 0; /* Prevent shrinking in flex container */
+  margin-right: 6px; /* Maintain spacing */
+  border-radius: 50%; /* Make it circular */
+  background: #6d4fc2; /* Button background color */
+  display: flex; /* Center icon inside */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
 }

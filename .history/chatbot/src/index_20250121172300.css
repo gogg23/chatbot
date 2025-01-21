@@ -79,9 +79,7 @@ body {
   gap: 20px;
   padding: 25px 22px;
   height: 460px;
-  margin-bottom: 82px;
   overflow-y: auto;
-  padding: 25px 22px;
 }
 
 .chat-body .message {
@@ -178,5 +176,4 @@ body {
 }
 
 .chat-form .message-input:valid ~ button {
-  display: block;
 }
