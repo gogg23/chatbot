@@ -16,13 +16,13 @@ const ChartForm = ({ setChatHistory }) => {
       { role: 'user', text: userMessage },
     ]);
 
-    //Add a "Thinking..." placeholder message for the bot's response
+    //update chat history with the user's message
 
     setTimeout(
       () =>
         setChatHistory((history) => [
           ...history,
-          { role: 'model', text: 'Thinking...' },
+          { role: 'user', text: userMessage },
         ]),
       600
     );

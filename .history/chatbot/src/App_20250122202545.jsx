@@ -27,14 +27,15 @@ const App = () => {
               How can I help you today?
             </p>
           </div>
-          {/*Render the chat history dynamically*/}
-          {chatHistory.map((chat, index) => (
-            <ChatMessage key={index} chat={chat} />
-          ))}
+          <div className='message user-message'>
+            <p className='message-text'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
         </div>
         {/*Chatbot Footer*/}
         <div className='chat-footer'>
-          <ChartForm setChatHistory={setChatHistory} />
+          <ChartForm />
         </div>
       </div>
     </div>

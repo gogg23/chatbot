@@ -1,31 +1,14 @@
 import React, { useRef } from 'react';
 
-const ChartForm = ({ setChatHistory }) => {
+const ChartForm = () => {
   const inputRef = useRef();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const userMessage = inputRef.current.value.trim();
     if (!userMessage) return;
-    inputRef.current.value = '';
 
-    //update chat history with the user's message
-
-    setChatHistory((history) => [
-      ...history,
-      { role: 'user', text: userMessage },
-    ]);
-
-    //Add a "Thinking..." placeholder message for the bot's response
-
-    setTimeout(
-      () =>
-        setChatHistory((history) => [
-          ...history,
-          { role: 'model', text: 'Thinking...' },
-        ]),
-      600
-    );
+    console.log(userMessage);
   };
   return (
     <form action='#' className='chat-form' onSubmit={handleFormSubmit}>
