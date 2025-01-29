@@ -6,10 +6,8 @@ const ChatMessage = ({ chat }) => {
     <div
       className={`message ${chat.role === 'model' ? 'bot' : 'user'}-message`}
     >
-      <p className='message-text'>{chat.text}</p>{' '}
-      {/* Ensure you're rendering the text */}
+      {chat.role === 'model' && <ChatbotIcon />}
+      <p className='message-text'>{chat.text}</p>
     </div>
   );
 };
-
-export default ChatMessage;

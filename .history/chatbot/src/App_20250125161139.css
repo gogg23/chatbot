@@ -1,0 +1,30 @@
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.message-text {
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.bot-message .message-text {
+  background-color: #e0f7fa; /* Light teal */
+  color: #004d40; /* Dark teal text */
+}
+
+.user-message .message-text {
+  background-color: #d1c4e9; /* Light purple */
+  color: #ffffff; /* White text for visibility */
+}

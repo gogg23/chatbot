@@ -1,0 +1,13 @@
+.message {
+  background-color: transparent !important;
+}
+
+.bot-message {
+  color: #000 !important;
+  background-color: #f0f0f0 !important; /* Light gray */
+}
+
+.user-message {
+  color: #000 !important;
+  background-color: #d0f0d0 !important; /* Light green */
+}

@@ -9,27 +9,25 @@ const ChartForm = ({ setChatHistory }) => {
     if (!userMessage) return;
     inputRef.current.value = '';
 
-    // Update chat history with the user's message
-    setChatHistory((history) => [
-      ...history,
-      { role: 'user', text: userMessage },
-    ]);
-
-    // Add a "Thinking..." placeholder message for the bot's response
-    setTimeout(() => {
+    try {
+      // Update chat history with the user's message
       setChatHistory((history) => [
         ...history,
-        { role: 'model', text: 'Thinking...' }, // Placeholder for bot response
+        { role: 'user', text: userMessage },
       ]);
 
-      // Simulate bot response after some time (you can replace this with your actual bot logic)
-      setTimeout(() => {
-        setChatHistory((history) => [
-          ...history,
-          { role: 'model', text: 'Hello, I am the bot. How can I help you?' },
-        ]);
-      }, 1000); // Bot response delay
-    }, 600); // Placeholder delay
+      // Add a "Thinking..." placeholder message for the bot's response
+      setTimeout(
+        () =>
+          setChatHistory((history) => [
+            ...history,
+            { role: 'model', text: 'Thinking...' },
+          ]),
+        600
+      );
+    } catch (error) {
+      console.error('Error updating chat history:', error);
+    }
   };
 
   return (
@@ -46,5 +44,4 @@ const ChartForm = ({ setChatHistory }) => {
   );
 };
 
-// Ensure default export
 export default ChartForm;

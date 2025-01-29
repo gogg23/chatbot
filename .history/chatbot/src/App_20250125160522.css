@@ -1,0 +1,38 @@
+/* Root styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Chat message styles */
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  max-width: 70%;
+}
+
+/* Bot message (purple background, white text) */
+.bot-message {
+  justify-content: flex-start;
+  background-color: #4a148c; /* Purple background */
+  color: #ffffff; /* White text for contrast */
+}
+
+/* User message (lighter purple background, dark text) */
+.user-message {
+  justify-content: flex-end;
+  background-color: #d1c4e9; /* Light purple background */
+  color: #4a148c; /* Dark purple text */
+}
+
+/* General message text */
+.message-text {
+  padding: 10px;
+  font-size: 14px;
+}

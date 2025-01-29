@@ -1,7 +1,7 @@
+import ChatMessage from './ChatMessage';
 import { useState } from 'react';
 import ChatbotIcon from './components/ChatbotIcon';
 import ChartForm from './components/ChartForm';
-import ChatMessage from './components/ChatMessage';
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);

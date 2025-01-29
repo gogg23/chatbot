@@ -6,8 +6,13 @@ const ChartForm = ({ setChatHistory }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const userMessage = inputRef.current.value.trim();
-    if (!userMessage) return;
-    inputRef.current.value = '';
+
+    if (!userMessage) {
+      console.error('Input is empty!');
+      return;
+    }
+
+    inputRef.current.value = ''; // Clear the input field
 
     // Update chat history with the user's message
     setChatHistory((history) => [
@@ -15,21 +20,13 @@ const ChartForm = ({ setChatHistory }) => {
       { role: 'user', text: userMessage },
     ]);
 
-    // Add a "Thinking..." placeholder message for the bot's response
+    // Add a "Thinking..." placeholder for bot's response
     setTimeout(() => {
       setChatHistory((history) => [
         ...history,
-        { role: 'model', text: 'Thinking...' }, // Placeholder for bot response
+        { role: 'model', text: 'Thinking...' },
       ]);
-
-      // Simulate bot response after some time (you can replace this with your actual bot logic)
-      setTimeout(() => {
-        setChatHistory((history) => [
-          ...history,
-          { role: 'model', text: 'Hello, I am the bot. How can I help you?' },
-        ]);
-      }, 1000); // Bot response delay
-    }, 600); // Placeholder delay
+    }, 600);
   };
 
   return (
@@ -41,10 +38,11 @@ const ChartForm = ({ setChatHistory }) => {
         className='message-input'
         required
       />
-      <button className='material-symbols-rounded'>arrow_upward</button>
+      <button className='material-symbols-rounded' type='submit'>
+        arrow_upward
+      </button>
     </form>
   );
 };
 
-// Ensure default export
 export default ChartForm;

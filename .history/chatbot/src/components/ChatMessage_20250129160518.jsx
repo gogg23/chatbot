@@ -1,6 +1,5 @@
 import React from 'react';
 import ChatbotIcon from './ChatbotIcon';
-
 const ChatMessage = ({ chat }) => {
   return (
     <div

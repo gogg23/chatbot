@@ -6,8 +6,10 @@ const ChatMessage = ({ chat }) => {
     <div
       className={`message ${chat.role === 'model' ? 'bot' : 'user'}-message`}
     >
-      <p className='message-text'>{chat.text}</p>{' '}
-      {/* Ensure you're rendering the text */}
+      <p className='message-text'>
+        {chat.role === 'model' && <ChatbotIcon />}
+        {chat.content}
+      </p>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import React, { useRef } from 'react';
-
 const ChartForm = ({ setChatHistory }) => {
   const inputRef = useRef();
 
@@ -45,6 +43,3 @@ const ChartForm = ({ setChatHistory }) => {
     </form>
   );
 };
-
-// Ensure default export
-export default ChartForm;
